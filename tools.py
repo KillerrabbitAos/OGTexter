@@ -31,7 +31,7 @@ class Conversation:
         self.members = members
 
 
-def scene(number, action, player_name):
+def scene(number, action, player_name, player_location):
     if number == 1:
         print(f"Whilst {action} you stumble upon Mr.Z")
         current_conversation = True

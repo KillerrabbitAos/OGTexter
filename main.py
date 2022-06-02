@@ -59,7 +59,7 @@ while run:
             if command.startswith("walk to"):
                 player.location = (command.split()[2])
                 player.action = f"walking to {player.location}"
-                print(f"You walked to {player.location}")
+                print(f"You began walking to {player.location}")
 
             if Steve.location == player.location:
                 current_conversation = tools.Conversation([Steve])
@@ -79,7 +79,7 @@ while run:
                 else:
                     print("no")
 
-            tools.scene(current_scene, player.action, player.name)
+            tools.scene(current_scene, player.action, player.name, player.location)
 
 
             if admin:
@@ -96,6 +96,7 @@ while run:
             player.health = player.health + int(heal)
             if player.location == "School":
                 school.Player_Presence = True
+                print("You are now at school.")
 
 
 
