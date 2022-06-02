@@ -96,7 +96,7 @@ while run:
             player.health = player.health + int(heal)
             if player.location == "School":
                 school.Player_Presence = True
-                print("You are now at school.")
+                print("you are now at school")
 
 
 
