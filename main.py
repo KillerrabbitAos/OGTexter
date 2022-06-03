@@ -30,6 +30,7 @@ health_indicator_bar = (tools.convert_to_string(
 while run:
 
     while run2:
+        print("Welcome to Texter!")
         print("It´s time to make your character.")
         player.name = input("Character Name: ")
         current_scene = 0
