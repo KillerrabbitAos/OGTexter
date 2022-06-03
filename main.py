@@ -53,8 +53,10 @@ while run:
                 if subCommand == "OK":
                     admin = True
                     print("you are now __admin__")
+                else:
+                    print("Ok. You are not __admin__")
                 
-
+            
             if choice:
                 Steve.location = player.location
             if command.startswith("walk to"):
