@@ -53,6 +53,7 @@ while run:
                 if subCommand == "OK":
                     admin = True
                     print("you are now __admin__")
+                
 
             if choice:
                 Steve.location = player.location
