@@ -38,6 +38,6 @@ def scene(number, action, player_name, player_location):
         while current_conversation:
             subcommand = input("What will you say?: ")
             print(f"{subcommand} to you too {player_name}")
-            if subcommand == "hello" or subcommand == "Hello":
+            if subcommand == "ello" or subcommand == "Hello":
                 current_conversation = False
 
