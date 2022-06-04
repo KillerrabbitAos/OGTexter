@@ -10,6 +10,7 @@ run = True
 run2 = True
 run3 = True
 admin = False
+haveBeenAdmin = False
 
 # persons
 player = tools.Person("steve", 12, "school", 100, ["steve", "Alex"], [], "unknown", "doing nothing")
@@ -53,9 +54,25 @@ while run:
                 subCommand = input("print OK after the semicolon to confirm, if not, just click enter;")
                 if subCommand == "OK":
                     admin = True
+                    haveBeenAdmin = True
                     print("you are now __admin__")
                 else:
                     print("Ok. You are not __admin__")
+            if command == "__deAdmin__":
+                if admin:
+                    subCommand = input("print OK after the semicolon to confirm, if not, just click enter;")
+                    if subCommand == "OK":
+                        admin = False
+                        print("You are no longer __admin__")
+                else:
+                    print("Nothing changed. You are not __admin__")
+            if command == "haveBeenAdmin?":
+                if haveBeenAdmin:
+                    print("Yes")
+                else:
+                    print("No")
+            
+
                 
             
             if choice:
