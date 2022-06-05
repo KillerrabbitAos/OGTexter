@@ -1,3 +1,6 @@
+from lib2to3.pgen2.token import NEWLINE
+
+
 def convert_to_string(text):
     bar = ""
     return bar.join(text)
@@ -46,8 +49,9 @@ def draw(txt):
     import time
     
     for x in re.findall("[a-zA-Z]", txt):
-        print(x)
-        time.sleep(1)
+        print(x, end="", flush=True)
+        time.sleep(0.25)
+    print("")
     
 
    

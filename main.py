@@ -40,7 +40,7 @@ while run:
         tools.draw("Welcome to Texter!")
         while run3:
             if admin:
-                adminRounds = adminRounds + 1
+                adminRounds = adminRffounds + 1
             choice = (random.randint(0, 100))
             current_scene = current_scene + 1
             current_conversation = False
