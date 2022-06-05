@@ -47,7 +47,7 @@ def draw(txt):
     
     for x in re.findall("[a-zA-Z]", txt):
         print(x)
-        time.sleep(0,25)
+        time.sleep(1)
     
 
    
