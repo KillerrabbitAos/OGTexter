@@ -41,3 +41,13 @@ def scene(number, action, player_name, player_location):
             if subcommand == "hello" or subcommand == "Hello":
                 current_conversation = False
 
+def draw(txt):
+    import re
+    import time
+    
+    for x in re.findall("[a-zA-Z]", txt):
+        print(x)
+        time.sleep(0,25)
+    
+
+   
