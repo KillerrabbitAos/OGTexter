@@ -37,9 +37,10 @@ while run:
         print("It´s time to make your character.")
         player.name = input("Character Name: ")
         current_scene = 0
+        tools.draw("Welcome to Texter!")
         while run3:
             if admin:
-                adminRounds = adminrounds + 1
+                adminRounds = adminRounds + 1
             choice = (random.randint(0, 100))
             current_scene = current_scene + 1
             current_conversation = False
@@ -88,7 +89,6 @@ while run:
 
             if Steve.location == player.location:
                 current_conversation = tools.Conversation([Steve])
-
 
             if command == "health":
                 print(f"Your health is {player.health}.")
