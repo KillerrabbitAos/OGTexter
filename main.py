@@ -11,6 +11,7 @@ run2 = True
 run3 = True
 admin = False
 haveBeenAdmin = False
+adminRounds = 0
 
 # persons
 player = tools.Person("steve", 12, "school", 100, ["steve", "Alex"], [], "unknown", "doing nothing")
@@ -32,10 +33,13 @@ while run:
 
     while run2:
         print("Welcome to Texter!")
+        print("")
         print("It´s time to make your character.")
         player.name = input("Character Name: ")
         current_scene = 0
         while run3:
+            if admin:
+                adminRounds = adminrounds + 1
             choice = (random.randint(0, 100))
             current_scene = current_scene + 1
             current_conversation = False
@@ -68,7 +72,7 @@ while run:
                     print("Nothing changed. You are not __admin__")
             if command == "haveBeenAdmin?":
                 if haveBeenAdmin:
-                    print("Yes")
+                    print(f"Yes (for {adminRounds})")
                 else:
                     print("No")
             
