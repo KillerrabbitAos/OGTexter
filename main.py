@@ -3,6 +3,9 @@ import time
 import re
 import tools
 
+run = True
+while run:
+    tools.draw("Texter")
 
 player_X = 0
 player_Y = 0
