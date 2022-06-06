@@ -45,7 +45,6 @@ def scene(number, action, player_name, player_location):
                 current_conversation = False
 
 def draw(txt):
-    import re
     import time
     
     for character in txt:
