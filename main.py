@@ -37,10 +37,8 @@ while run:
         print("It´s time to make your character.")
         player.name = input("Character Name: ")
         current_scene = 0
-        tools.draw("Welcome to Texter!")
+        tools.draw(f"Welcome to Texter {player.name}!")
         while run3:
-            if admin:
-                adminRounds = adminRffounds + 1
             choice = (random.randint(0, 100))
             current_scene = current_scene + 1
             current_conversation = False
@@ -116,6 +114,9 @@ while run:
                     heal = re.findall("\d", command)
                     heal = tools.convert_to_string(heal)
                     print(heal)
+
+            if admin:
+                adminRounds = adminRounds + 1
 
             player.health = player.health - int(hurt)
             player.health = player.health + int(heal)

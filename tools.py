@@ -48,8 +48,8 @@ def draw(txt):
     import re
     import time
     
-    for x in re.findall("[a-zA-Z]", txt):
-        print(x, end="", flush=True)
+    for character in txt:
+        print(character, end="", flush=True)
         time.sleep(0.25)
     print("")
     
