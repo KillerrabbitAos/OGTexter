@@ -47,7 +47,7 @@ def scene(number, action, player_name, player_location):
 def draw(txt, totalTime, wait):
     import time
     for character in txt:
-        print(character, end="", flush=True)
+        print(character, end="""""", flush=True)
         time.sleep(totalTime/len(txt))
     time.sleep(wait)
     print("")
