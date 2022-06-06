@@ -50,7 +50,7 @@ def draw(txt):
     
     for character in txt:
         print(character, end="", flush=True)
-        time.sleep(0.25)
+        time.sleep(0.125)
     print("")
     
 
