@@ -1,3 +1,6 @@
+from lib2to3.pgen2.token import NEWLINE
+
+
 def convert_to_string(text):
     bar = ""
     return bar.join(text)
@@ -42,12 +45,12 @@ def scene(number, action, player_name, player_location):
                 current_conversation = False
 
 def draw(txt):
-    import re
     import time
     
-    for x in re.findall("[a-zA-Z]", txt):
-        print(x)
-        time.sleep(1)
+    for character in txt:
+        print(character, end="", flush=True)
+        time.sleep(0.125)
+    print("")
     
 
    
