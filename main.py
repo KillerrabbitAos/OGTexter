@@ -38,6 +38,7 @@ while run:
         player.name = input("Character Name: ")
         current_scene = 0
         tools.draw(f"Welcome to Texter {player.name}!")
+        time.sleep(1)
         while run3:
             choice = (random.randint(0, 100))
             current_scene = current_scene + 1
