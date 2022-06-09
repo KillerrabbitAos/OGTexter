@@ -37,8 +37,7 @@ while run:
         print("It´s time to make your character.")
         player.name = input("Character Name: ")
         current_scene = 0
-        tools.draw(f"Welcome to Texter {player.name}!")
-        time.sleep(1)
+        tools.draw(f"Welcome to Texter {player.name}!", 2, 0.5)
         while run3:
             choice = (random.randint(0, 100))
             current_scene = current_scene + 1
@@ -49,7 +48,10 @@ while run:
             health_indicator_bar = (tools.convert_to_string(
                 ([indicator] * (int(player.health / 10)))))
 
-            print(
+            if current_scene == 1:
+                tools.draw((f"health:{health_indicator_bar} friends:{len(player.friends)}"), 3, 1)
+            else:
+                print(
                 f"health:{health_indicator_bar} friends:{len(player.friends)}")
 
             command = input("Write here: ")

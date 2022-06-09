@@ -44,12 +44,12 @@ def scene(number, action, player_name, player_location):
             if subcommand == "hello" or subcommand == "Hello":
                 current_conversation = False
 
-def draw(txt):
+def draw(txt, totalTime, wait):
     import time
-    
     for character in txt:
-        print(character, end="", flush=True)
-        time.sleep(0.125)
+        print(character, end="""""", flush=True)
+        time.sleep(totalTime/len(txt))
+    time.sleep(wait)
     print("")
     
 
