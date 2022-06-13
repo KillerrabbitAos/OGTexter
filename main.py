@@ -23,10 +23,10 @@ Alex = tools.Person("steve", 12, "school", 100, ["Steve", player.name], [],
 school = tools.Location(True, True)
 
 # indicators
-indicator = "/"
+indicator = "█░"
 
 health_indicator_bar = (tools.convert_to_string(
-    ([indicator] * (int(player.health / 10)))))
+    ([indicator] * (int(player.health / 10))))[:-1])
 
 # main loops
 while run:
@@ -45,8 +45,9 @@ while run:
             player.action = "doing nothing"
             hurt = 0
             heal = 0
+
             health_indicator_bar = (tools.convert_to_string(
-                ([indicator] * (int(player.health / 10)))))
+                ([indicator] * (int(player.health / 10))))[:-1])
 
             if current_scene == 1:
                 tools.draw((f"health:{health_indicator_bar} friends:{len(player.friends)}"), 3, 1)

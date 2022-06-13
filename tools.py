@@ -43,8 +43,11 @@ def scene(number, action, player_name, player_location):
             print(f"{subcommand} to you too {player_name}")
             if subcommand == "hello" or subcommand == "Hello":
                 current_conversation = False
+    
+    if number == 2:
+        print(f"")
 
-def draw(txt, totalTime, wait):
+def draw(txt, totalTime: int, wait):
     import time
     for character in txt:
         print(character, end="""""", flush=True)
