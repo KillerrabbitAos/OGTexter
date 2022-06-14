@@ -35,9 +35,10 @@ class Conversation:
 
 
 def scene(number, action, player_name, player_location):
+    import time
     if number == 1:
         print(f"Whilst {action} you stumble upon Mr. Pancake")
-        
+        time.sleep(3)
         def filename():
             import os
             filename = ("pancake.mp4")

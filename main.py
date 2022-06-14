@@ -67,7 +67,7 @@ while run:
             command = input("Write here: ")
 
             if command == ("reset"):
-                os.system('cls')
+                os.system("cls")
                 current_scene = 0 
                 run3 = False
                 break
