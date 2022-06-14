@@ -2,6 +2,7 @@ import random
 import time
 import re
 import tools
+import os
 
 player_X = 0
 player_Y = 0
@@ -59,10 +60,11 @@ while run:
             command = input("Write here: ")
 
             if command == ("reset"):
+                os.system('cls')
                 current_scene = 0 
                 run3 = False
                 break
-            
+
             if command == "__admin__":
                 subCommand = input("print OK after the semicolon to confirm, if not, just click enter;")
                 if subCommand == "OK":
