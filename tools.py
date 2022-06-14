@@ -40,7 +40,7 @@ def scene(number, action, player_name, player_location):
         
         def filename():
             import os
-            filename = pancake.mp4
+            filename = ("pancake.mp4")
             os.system("start " + filename)
         
         open(filename())
