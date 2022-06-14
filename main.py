@@ -4,6 +4,12 @@ import re
 import tools
 import os
 
+def filename():
+    import os
+    filename = pancake.mp4
+    os.system("start " + filename)
+    open(filename)
+    
 player_X = 0
 player_Y = 0
 

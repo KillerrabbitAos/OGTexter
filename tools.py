@@ -36,10 +36,18 @@ class Conversation:
 
 def scene(number, action, player_name, player_location):
     if number == 1:
-        print(f"Whilst {action} you stumble upon Mr.Z")
+        print(f"Whilst {action} you stumble upon Mr. Pancake")
+        
+        def filename():
+            import os
+            filename = pancake.mp4
+            os.system("start " + filename)
+        
+        open(filename)
+
         current_conversation = True
         while current_conversation:
-            subcommand = input("What will you say?: ")
+            subcommand = input("What will you say to Mr. Pancake?: ")
             print(f"{subcommand} to you too {player_name}")
             if subcommand == "hello" or subcommand == "Hello":
                 current_conversation = False
@@ -54,6 +62,8 @@ def draw(txt, totalTime: int, wait):
         time.sleep(totalTime/len(txt))
     time.sleep(wait)
     print("")
+
+
     
 
    
