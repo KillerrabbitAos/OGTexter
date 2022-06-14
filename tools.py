@@ -43,7 +43,7 @@ def scene(number, action, player_name, player_location):
             filename = pancake.mp4
             os.system("start " + filename)
         
-        open(filename)
+        open(filename())
 
         current_conversation = True
         while current_conversation:
