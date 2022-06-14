@@ -45,6 +45,7 @@ while run:
             player.action = "doing nothing"
             hurt = 0
             heal = 0
+        
 
             health_indicator_bar = (tools.convert_to_string(
                 ([indicator] * (int(player.health / 10))))[:-1])
@@ -57,6 +58,11 @@ while run:
 
             command = input("Write here: ")
 
+            if command == ("reset"):
+                current_scene = 0 
+                run3 = False
+                break
+            
             if command == "__admin__":
                 subCommand = input("print OK after the semicolon to confirm, if not, just click enter;")
                 if subCommand == "OK":
