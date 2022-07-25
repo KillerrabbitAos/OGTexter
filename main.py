@@ -2,14 +2,7 @@ import random
 import time
 import re
 import tools
-import os
 
-def filename():
-    import os
-    filename = pancake.mp4
-    os.system("start " + filename)
-    open(filename)
-    
 player_X = 0
 player_Y = 0
 
@@ -30,10 +23,10 @@ Alex = tools.Person("steve", 12, "school", 100, ["Steve", player.name], [],
 school = tools.Location(True, True)
 
 # indicators
-indicator = "█░"
+indicator = "/"
 
 health_indicator_bar = (tools.convert_to_string(
-    ([indicator] * (int(player.health / 10))))[:-1])
+    ([indicator] * (int(player.health / 10)))))
 
 # main loops
 while run:
@@ -45,7 +38,6 @@ while run:
         player.name = input("Character Name: ")
         current_scene = 0
         tools.draw(f"Welcome to Texter {player.name}!", 2, 0.5)
-        run3 = True
         while run3:
             choice = (random.randint(0, 100))
             current_scene = current_scene + 1
@@ -53,10 +45,8 @@ while run:
             player.action = "doing nothing"
             hurt = 0
             heal = 0
-        
-
             health_indicator_bar = (tools.convert_to_string(
-                ([indicator] * (int(player.health / 10))))[:-1])
+                ([indicator] * (int(player.health / 10)))))
 
             if current_scene == 1:
                 tools.draw((f"health:{health_indicator_bar} friends:{len(player.friends)}"), 3, 1)
@@ -65,12 +55,6 @@ while run:
                 f"health:{health_indicator_bar} friends:{len(player.friends)}")
 
             command = input("Write here: ")
-
-            if command == ("reset"):
-                os.system("cls")
-                current_scene = 0 
-                run3 = False
-                break
 
             if command == "__admin__":
                 subCommand = input("print OK after the semicolon to confirm, if not, just click enter;")
@@ -142,6 +126,8 @@ while run:
             if player.location == "School":
                 school.Player_Presence = True
                 print("you are now at school")
+
+                
 
 
 
