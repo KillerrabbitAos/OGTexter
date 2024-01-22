@@ -23,7 +23,7 @@ Alex = tools.Person("steve", 12, "school", 100, ["Steve", player.name], [],
 school = tools.Location(True, True)
 
 # indicators
-indicator = "/"
+indicator = "█░"
 
 health_indicator_bar = (tools.convert_to_string(
     ([indicator] * (int(player.health / 10)))))
